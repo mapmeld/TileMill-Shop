@@ -37,9 +37,9 @@ view.prototype.attach = function() {
         }).join('<br/>') + '<br/><code>&lt;/table&gt;</code>' );
         this.$('.requires-tokens').attr('disabled', false);
         $(this.el).removeClass('loading').removeClass('restartable');
-        // this.$('.sendmetable').html( '<table>' + _(fields).map(function(f) {
-        //    return '<tr><td>' + f + '</td><td>{{{' + f + '}}}</td></tr>';
-        // }).join(' ') + '</table>' );
+        this.$('.sendmetable').val( '<table>' + _(fields).map(function(f) {
+            return '{{#' + f + '}}<tr><td>' + f + '</td><td>{{{' + f + '}}}</td></tr>{{/' + f + '}}';
+        }).join(' ') + '</table>' ).change( );
     }).bind(this);
 
     // Cache the datasource model to `this.datasource` so it can
