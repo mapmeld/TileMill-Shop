@@ -19,7 +19,7 @@ Mac OS X Terminal one-liner:
 </ul>
 
 <h3>Perfect for OpenStreetMap</h3>
-OpenStreetMap data has tons of columns but each attribute only has a few.
+OpenStreetMap data has tons of columns but each object uses only a few of them.
 
 Instead of writing out your own table, and learning the Mustache formatting language, just copy-paste.
 
