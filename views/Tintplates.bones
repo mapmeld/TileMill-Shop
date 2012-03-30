@@ -32,11 +32,14 @@ view.prototype.attach = function() {
 
     var update = _(function(model) {
         var fields = _(model.get('fields')).keys();
-        this.$('.tokens').html(_(fields).map(function(f) {
-            return '<code>{{{' + f + '}}}</code>';
-        }).join(' '));
+        this.$('.tokens').html( '<code>&lt;table&gt;</code><br/>' + _(fields).map(function(f) {
+            return '<code>{{#' + f + '}}&lt;tr&gt;&lt;td&gt;' + f + '&lt;/td&gt;&lt;td&gt;{{{' + f + '}}}&lt;/td&gt;&lt;/tr&gt;{{/' + f + '}}</code>';
+        }).join('<br/>') + '<br/><code>&lt;/table&gt;</code>' );
         this.$('.requires-tokens').attr('disabled', false);
         $(this.el).removeClass('loading').removeClass('restartable');
+        // this.$('.sendmetable').html( '<table>' + _(fields).map(function(f) {
+        //    return '<tr><td>' + f + '</td><td>{{{' + f + '}}}</td></tr>';
+        // }).join(' ') + '</table>' );
     }).bind(this);
 
     // Cache the datasource model to `this.datasource` so it can

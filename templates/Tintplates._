@@ -1,11 +1,25 @@
 <% var interactivity = get('interactivity') || {}; %>
-
-Custom Plugin yay!
-<br/>
-<select name='interactivity.layer'>
-  <option value=''>-- disabled --</option>
-    <% _(get('Layer').toArray().reverse()).each(function(layer) { %>
-      <option <% if (interactivity.layer === layer.get('id')) { %>selected='selected'<% } %> value='<%= layer.get('id') %>'><%= layer.get('id') %>
-      </option>
-    <% }); %>
-</select>
+<div style="padding:20px;">
+  Custom Plugin yay!
+  <br/><br/>
+  <select name='interactivity.layer'>
+    <option value=''>-- disabled --</option>
+      <% _(get('Layer').toArray().reverse()).each(function(layer) { %>
+        <option <% if (interactivity.layer === layer.get('id')) { %>selected='selected'<% } %> value='<%= layer.get('id') %>'><%= layer.get('id') %>
+        </option>
+      <% }); %>
+  </select>
+  <br/>
+  <h3>Copy this:</h3>
+  <div class='templates-tokens code tokens scrolling' style='display:block;max-height:200px;overflow-y:scroll;'></div>
+  <br/>
+  <h3>Into this:</h3>
+  <textarea
+    <% if (!interactivity.layer) %>disabled<%;%>
+    name='interactivity.template_teaser'
+    class='code requires-tokens send-me-table'
+    rows="6" cols="40">
+      <%=interactivity.template_teaser%>
+  </textarea>
+  <h3>Then Save!</h3>
+</div>
