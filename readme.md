@@ -8,7 +8,7 @@ Mac OS X Terminal one-liner:
 <code>cp -r TileMill-Shop /Applications/TileMill.app/Contents/Resources/plugins/</code>
 
 <h3>What to do</h3>
-<img src="http://i.imgur.com/PVRoo.png"/>
+<img src="http://i.imgur.com/VT2g9.png"/>
 
 <ul>
 <li>Click on the new circle/database icon above the standard legend/teaser setup</li>
