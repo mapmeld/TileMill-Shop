@@ -1,0 +1,11 @@
+<% var interactivity = get('interactivity') || {}; %>
+
+Custom Plugin yay!
+<br/>
+<select name='interactivity.layer'>
+  <option value=''>-- disabled --</option>
+    <% _(get('Layer').toArray().reverse()).each(function(layer) { %>
+      <option <% if (interactivity.layer === layer.get('id')) { %>selected='selected'<% } %> value='<%= layer.get('id') %>'><%= layer.get('id') %>
+      </option>
+    <% }); %>
+</select>

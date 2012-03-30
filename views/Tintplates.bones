@@ -15,7 +15,7 @@ view.prototype.initialize = function(options) {
 
 view.prototype.render = function() {
     if (this.$('.tooltips').size()) return this;
-    this.$('.content').html(tintplates.Tintplates(this.model));
+    this.$('.content').html(templates.Tintplates(this.model));
     return this;
 };
 
@@ -95,7 +95,7 @@ views.Project.augment({
     },
     render: function(p) {
         p.call(this);
-        this.$('.palette').prepend("<a class='drawer' href='#tintplates'><span class='icon reverse tooltip'>Tintplates</span></a>");
+        this.$('.palette').prepend("<a class='drawer' href='#tintplates' title='Auto-Table'><span class='icon reverse sqlite'>Tintplates</span></a>");
         return this;
     }
 });
