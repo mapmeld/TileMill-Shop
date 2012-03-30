@@ -1,0 +1,6 @@
+{
+    "name": "TintPlates",
+    "description": "Trying a custom plugin.",
+    "engines": {"tilemill":"*"},
+    "private": false
+}
