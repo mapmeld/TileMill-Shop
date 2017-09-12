@@ -24,3 +24,6 @@ OpenStreetMap data has tons of columns but each object uses only a few of them.
 Instead of writing out your own table, and learning the Mustache formatting language, just select your layer and go.
 
 You'll see all of the object's attributes which have information, and none of the ones which are blank.
+
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/mapmeld/TileMill-Shop.svg)](https://greenkeeper.io/)
